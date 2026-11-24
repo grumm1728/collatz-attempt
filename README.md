@@ -2,6 +2,8 @@
 
 We seek a positive integer whose standard Collatz trajectory avoids 1 forever, or a proof that such an integer exists. An explicit positive cycle excluding 1 has a finite certificate. An escape proof could instead give an increasing, unbounded sequence of checkpoints along one fixed orbit.
 
+The first pilot eliminated a bounded family of compressed cycle recipes. Of 18 structured escape candidates at multiplier 3, 15 reached 1 and all 18 fell below their own starting values. The note records the remaining question and commands for reproducing both rounds. [Read the sprint findings](research/pilot.md) · [Explore the three figures](figures/README.md)
+
 ## Running the research code
 
 Use Python 3.13 from the repository root. The arithmetic and reference checks use the Python standard library.

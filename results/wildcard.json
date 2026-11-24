@@ -1,0 +1,246 @@
+{
+  "arithmetic": "Python unbounded exact integers",
+  "verification": {
+    "standard_cycle": [
+      1,
+      4,
+      2,
+      1
+    ],
+    "terminal_formula_checked_k": [
+      1,
+      128
+    ]
+  },
+  "round1": {
+    "hypothesis": "Some k>=3 recharges at least k: v2(U^k(2^k-1)+1)>=k",
+    "prediction_before_test": "No hits through k=20000; odd k always recharge 1",
+    "range": {
+      "k_min": 3,
+      "k_max": 20000
+    },
+    "stop_rule": "Exhaust exact k bound; do not claim general impossibility",
+    "hits": [],
+    "odd_k_formula_failures": [],
+    "recharge_histogram_including_k1_k2": {
+      "1": 15003,
+      "2": 2496,
+      "3": 1253,
+      "4": 622,
+      "5": 314,
+      "6": 157,
+      "7": 78,
+      "8": 37,
+      "9": 18,
+      "10": 12,
+      "11": 4,
+      "12": 1,
+      "13": 1,
+      "14": 2,
+      "17": 2
+    },
+    "maximum_recharge": 17,
+    "record_recharges": [
+      {
+        "k": 1,
+        "recharge": 1
+      },
+      {
+        "k": 6,
+        "recharge": 2
+      },
+      {
+        "k": 12,
+        "recharge": 6
+      },
+      {
+        "k": 174,
+        "recharge": 9
+      },
+      {
+        "k": 1198,
+        "recharge": 17
+      }
+    ],
+    "proof": [
+      "For j<k, U^j(2^k-1)=3^j*2^(k-j)-1. The first k-1 U steps divide by exactly 2.",
+      "At j=k, the odd terminal is (3^k-1)/2^v2(3^k-1).",
+      "For odd k, 3^k=3 mod 8, so the terminal is 1 mod 4, and v2(terminal+1)=1.",
+      "Finite failure for even k does not establish failure for all k, and a recharge hit alone would not establish escape."
+    ]
+  },
+  "round2": {
+    "hypothesis": "There is a nonempty periodic forward-closed set excluding residue 1, for some tested modulus",
+    "prediction_before_test": "Every residue reaches residue 1 in the conservative quotient graph",
+    "all_integer_moduli_range": [
+      2,
+      4096
+    ],
+    "number_of_moduli": 4103,
+    "total_residue_classes": 9967359,
+    "largest_modulus": 995328,
+    "selected_results": [
+      {
+        "modulus": 3,
+        "reachable": 3,
+        "maximum_quotient_distance": 1
+      },
+      {
+        "modulus": 4,
+        "reachable": 4,
+        "maximum_quotient_distance": 2
+      },
+      {
+        "modulus": 9,
+        "reachable": 9,
+        "maximum_quotient_distance": 4
+      },
+      {
+        "modulus": 12,
+        "reachable": 12,
+        "maximum_quotient_distance": 5
+      },
+      {
+        "modulus": 16,
+        "reachable": 16,
+        "maximum_quotient_distance": 6
+      },
+      {
+        "modulus": 27,
+        "reachable": 27,
+        "maximum_quotient_distance": 6
+      },
+      {
+        "modulus": 36,
+        "reachable": 36,
+        "maximum_quotient_distance": 8
+      },
+      {
+        "modulus": 48,
+        "reachable": 48,
+        "maximum_quotient_distance": 9
+      },
+      {
+        "modulus": 81,
+        "reachable": 81,
+        "maximum_quotient_distance": 9
+      },
+      {
+        "modulus": 108,
+        "reachable": 108,
+        "maximum_quotient_distance": 10
+      },
+      {
+        "modulus": 144,
+        "reachable": 144,
+        "maximum_quotient_distance": 11
+      },
+      {
+        "modulus": 243,
+        "reachable": 243,
+        "maximum_quotient_distance": 11
+      },
+      {
+        "modulus": 256,
+        "reachable": 256,
+        "maximum_quotient_distance": 14
+      },
+      {
+        "modulus": 324,
+        "reachable": 324,
+        "maximum_quotient_distance": 13
+      },
+      {
+        "modulus": 432,
+        "reachable": 432,
+        "maximum_quotient_distance": 14
+      },
+      {
+        "modulus": 768,
+        "reachable": 768,
+        "maximum_quotient_distance": 17
+      },
+      {
+        "modulus": 972,
+        "reachable": 972,
+        "maximum_quotient_distance": 16
+      },
+      {
+        "modulus": 1296,
+        "reachable": 1296,
+        "maximum_quotient_distance": 17
+      },
+      {
+        "modulus": 2304,
+        "reachable": 2304,
+        "maximum_quotient_distance": 19
+      },
+      {
+        "modulus": 3888,
+        "reachable": 3888,
+        "maximum_quotient_distance": 19
+      },
+      {
+        "modulus": 4096,
+        "reachable": 4096,
+        "maximum_quotient_distance": 22
+      },
+      {
+        "modulus": 6912,
+        "reachable": 6912,
+        "maximum_quotient_distance": 22
+      },
+      {
+        "modulus": 12288,
+        "reachable": 12288,
+        "maximum_quotient_distance": 25
+      },
+      {
+        "modulus": 20736,
+        "reachable": 20736,
+        "maximum_quotient_distance": 25
+      },
+      {
+        "modulus": 36864,
+        "reachable": 36864,
+        "maximum_quotient_distance": 27
+      },
+      {
+        "modulus": 62208,
+        "reachable": 62208,
+        "maximum_quotient_distance": 27
+      },
+      {
+        "modulus": 110592,
+        "reachable": 110592,
+        "maximum_quotient_distance": 30
+      },
+      {
+        "modulus": 331776,
+        "reachable": 331776,
+        "maximum_quotient_distance": 33
+      },
+      {
+        "modulus": 995328,
+        "reachable": 995328,
+        "maximum_quotient_distance": 35
+      }
+    ],
+    "unreachable_failures": [],
+    "maximum_quotient_distance": 35,
+    "moduli_achieving_maximum": [
+      995328
+    ],
+    "independent_graph_verification_moduli": [
+      2,
+      128
+    ],
+    "stop_rule": "Exhaust exact modulus list; investigate any unreachable residue",
+    "interpretation": [
+      "Any actual standard trajectory induces a path in this quotient graph.",
+      "If any residue were unreachable from residue 1 in reverse, the unreachable residue classes would be forward closed and exclude 1, giving a genuine nonconvergence certificate.",
+      "All residues reachable in this conservative graph excludes this periodic invariant mechanism only for tested moduli.",
+      "A quotient path need not lift to one actual trajectory. Reachability here does not prove that integers reach 1, nor does a distance bound constrain actual stopping times."
+    ]
+  }
+}
