@@ -1,0 +1,563 @@
+{
+  "round_1": {
+    "prediction": "Original translation +7 and no fixed residue. The exhaustive split classes include rejections and survivors. At least 90% rejection in each sampled ordering, with a difference of at most ten percentage points.",
+    "prediction_met": true,
+    "modulus": 31,
+    "motifs": [
+      [
+        1,
+        2
+      ],
+      [
+        2
+      ]
+    ],
+    "motif_counts": [
+      59813072756,
+      24488718470
+    ],
+    "odd_steps": 144114863982,
+    "divisions": 228416655208,
+    "standard_steps_if_realized": 372531519190,
+    "original": {
+      "affine_tuple_modulo_prime": [
+        8,
+        8,
+        25
+      ],
+      "translation": 7,
+      "fixed_residues": 0
+    },
+    "packet_minimum_certificate": {
+      "parameter_pairs_covered": 1,
+      "maximum_packets_per_motif": 16,
+      "motif_weight_caps": [
+        "5",
+        "1"
+      ],
+      "total_weight_cap": "96",
+      "closing_gap_lower_bound": {
+        "numerator": 110217801915391453144473040692547373432391084351371651022280,
+        "denominator": 10000000000000000000000000000000000000000000000000000000000000000000000,
+        "length_pair": [
+          144114863982,
+          228416655208
+        ],
+        "log_series_terms": 128
+      },
+      "strict_upper_bound_on_minimum": 8710026722794,
+      "lower_bound_on_nontrivial_cycle_minimum": 2361183241434822606848,
+      "all_covered_packet_words_excluded": true
+    },
+    "two_split_exhaustive_modulo_prime": {
+      "motif_orders": [
+        3,
+        30
+      ],
+      "tested": 90,
+      "rejected": 89,
+      "surviving_this_modulus": 1,
+      "fixed_residues_for_each_survivor": 31,
+      "counts_by_translation": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        32,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "sampled_matched_templates": {
+      "seed": 2026112401,
+      "packets_per_motif": 16,
+      "alternating": {
+        "tested": 256,
+        "rejected": 251,
+        "surviving_this_modulus": 5,
+        "fixed_residues_for_each_survivor": 31,
+        "counts_by_translation": [
+          5,
+          8,
+          7,
+          8,
+          6,
+          4,
+          9,
+          8,
+          9,
+          11,
+          6,
+          10,
+          10,
+          9,
+          9,
+          9,
+          6,
+          6,
+          6,
+          7,
+          5,
+          11,
+          10,
+          12,
+          4,
+          7,
+          11,
+          7,
+          9,
+          16,
+          11
+        ]
+      },
+      "shuffled": {
+        "tested": 256,
+        "rejected": 247,
+        "surviving_this_modulus": 9,
+        "fixed_residues_for_each_survivor": 31,
+        "counts_by_translation": [
+          9,
+          10,
+          8,
+          9,
+          6,
+          5,
+          6,
+          8,
+          6,
+          9,
+          6,
+          5,
+          10,
+          11,
+          6,
+          6,
+          5,
+          9,
+          6,
+          6,
+          11,
+          12,
+          16,
+          10,
+          8,
+          5,
+          5,
+          13,
+          7,
+          10,
+          13
+        ]
+      },
+      "both_rejected": 242,
+      "only_alternating_rejected": 9,
+      "only_shuffled_rejected": 5,
+      "both_survived": 0
+    },
+    "independent_residue_permutations_checked": 603
+  },
+  "round_2": {
+    "prediction": "Each ordering has at least one discovery survivor, and the held-out prime rejects at least half of the discovery survivors in each ordering.",
+    "prediction_met": true,
+    "lower_bound_on_cycle_minimum": 2361183241434822606848,
+    "inclusive_odd_step_bounds": [
+      137500000000,
+      10000000000000
+    ],
+    "exhaustive_parameter_window_pairs": 10181,
+    "holdout_eligible_pairs": 1719,
+    "holdout_and_discovery_eligible_pairs": 1077,
+    "selected_pairs": 128,
+    "pair_selection": "smallest eligible odd step counts, then division counts",
+    "first_selected_pair": [
+      281642909294,
+      446393449825
+    ],
+    "last_selected_pair": [
+      3406857332966,
+      5399741118058
+    ],
+    "seed": 2026112402,
+    "packets_per_motif": 16,
+    "matched_samples_per_length": 8,
+    "motifs": [
+      [
+        1,
+        2
+      ],
+      [
+        2
+      ]
+    ],
+    "discovery_primes": [
+      5,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97
+    ],
+    "holdout_prime": 7,
+    "outcomes": {
+      "alternating": {
+        "tested": 1024,
+        "rejected_by_discovery": 979,
+        "discovery_survivors": 45,
+        "rejected_by_holdout": 34,
+        "survived_all_tested_moduli": 11,
+        "independent_permutation_checks": 1141
+      },
+      "shuffled": {
+        "tested": 1024,
+        "rejected_by_discovery": 982,
+        "discovery_survivors": 42,
+        "rejected_by_holdout": 34,
+        "survived_all_tested_moduli": 8,
+        "independent_permutation_checks": 1152
+      }
+    },
+    "first_holdout_rejection": {
+      "shuffled": {
+        "odd_steps": 602806730608,
+        "divisions": 955426063196,
+        "discovery_moduli": [
+          5
+        ],
+        "holdout_translation": 5,
+        "schedule": [
+          [
+            0,
+            21524623078
+          ],
+          [
+            0,
+            476979785
+          ],
+          [
+            0,
+            32723592647
+          ],
+          [
+            1,
+            246849737
+          ],
+          [
+            1,
+            388053939
+          ],
+          [
+            1,
+            10075098389
+          ],
+          [
+            0,
+            6704049889
+          ],
+          [
+            0,
+            22146730526
+          ],
+          [
+            1,
+            9514686492
+          ],
+          [
+            1,
+            891688539
+          ],
+          [
+            0,
+            2079997091
+          ],
+          [
+            0,
+            10738456258
+          ],
+          [
+            0,
+            1179510576
+          ],
+          [
+            0,
+            13428607092
+          ],
+          [
+            1,
+            1120082344
+          ],
+          [
+            1,
+            6426176254
+          ],
+          [
+            0,
+            24528545293
+          ],
+          [
+            1,
+            11122953252
+          ],
+          [
+            0,
+            44435404275
+          ],
+          [
+            1,
+            2731637968
+          ],
+          [
+            1,
+            11138659320
+          ],
+          [
+            0,
+            29924109891
+          ],
+          [
+            1,
+            18645666833
+          ],
+          [
+            1,
+            10046588817
+          ],
+          [
+            1,
+            1921210103
+          ],
+          [
+            0,
+            2473472048
+          ],
+          [
+            1,
+            2051712717
+          ],
+          [
+            1,
+            1171082982
+          ],
+          [
+            1,
+            14939786882
+          ],
+          [
+            0,
+            3453885715
+          ],
+          [
+            0,
+            26304198882
+          ],
+          [
+            0,
+            8065234974
+          ]
+        ]
+      },
+      "alternating": {
+        "odd_steps": 602806730608,
+        "divisions": 955426063196,
+        "discovery_moduli": [
+          5
+        ],
+        "holdout_translation": 6,
+        "schedule": [
+          [
+            0,
+            951342794
+          ],
+          [
+            1,
+            3554321282
+          ],
+          [
+            0,
+            10061375797
+          ],
+          [
+            1,
+            3231672219
+          ],
+          [
+            0,
+            69963322880
+          ],
+          [
+            1,
+            6008620852
+          ],
+          [
+            0,
+            1003949599
+          ],
+          [
+            1,
+            7584321684
+          ],
+          [
+            0,
+            9724971488
+          ],
+          [
+            1,
+            4485939270
+          ],
+          [
+            0,
+            1016547825
+          ],
+          [
+            1,
+            7391035523
+          ],
+          [
+            0,
+            370385587
+          ],
+          [
+            1,
+            7000117704
+          ],
+          [
+            0,
+            24666144221
+          ],
+          [
+            1,
+            695254034
+          ],
+          [
+            0,
+            10017203086
+          ],
+          [
+            1,
+            17061729482
+          ],
+          [
+            0,
+            36791094092
+          ],
+          [
+            1,
+            2819721826
+          ],
+          [
+            0,
+            7708152722
+          ],
+          [
+            1,
+            8601418252
+          ],
+          [
+            0,
+            13267032770
+          ],
+          [
+            1,
+            6113239577
+          ],
+          [
+            0,
+            13854173472
+          ],
+          [
+            1,
+            5713167720
+          ],
+          [
+            0,
+            9168098842
+          ],
+          [
+            1,
+            12658623063
+          ],
+          [
+            0,
+            28949547658
+          ],
+          [
+            1,
+            4041395348
+          ],
+          [
+            0,
+            12674055187
+          ],
+          [
+            1,
+            5471356732
+          ]
+        ]
+      }
+    },
+    "packet_minimum_certificate": {
+      "parameter_pairs_covered": 10181,
+      "maximum_packets_per_motif": 16,
+      "motif_weight_caps": [
+        "5",
+        "1"
+      ],
+      "total_weight_cap": "96",
+      "closing_gap_lower_bound": {
+        "numerator": 659287766700676266909232245351796542949587396887597179733,
+        "denominator": 10000000000000000000000000000000000000000000000000000000000000000000000,
+        "length_pair": [
+          5409303924479,
+          8573543875303
+        ],
+        "log_series_terms": 128
+      },
+      "strict_upper_bound_on_minimum": 1456116810424474,
+      "lower_bound_on_nontrivial_cycle_minimum": 2361183241434822606848,
+      "all_covered_packet_words_excluded": true
+    },
+    "modular_survivors_excluded_by_packet_minimum": {
+      "alternating": 11,
+      "shuffled": 8
+    }
+  }
+}
