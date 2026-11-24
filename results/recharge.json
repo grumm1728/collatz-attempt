@@ -1,0 +1,111 @@
+{
+  "prediction": "Every valuation row has an excluding residue by depth bits+32, and the exact small-exponent scan finds no recharge.",
+  "inclusive_lower_m": 3,
+  "exclusive_upper_m": 1048576,
+  "bits": 20,
+  "maximum_lift_depth": 22,
+  "direct_scan": {
+    "inclusive_start_m": 3,
+    "exclusive_end_m": 22,
+    "tested": 19,
+    "recharges": 0
+  },
+  "residue_rows": [
+    {
+      "valuation": 1,
+      "depth": 22,
+      "least_b": 2490967
+    },
+    {
+      "valuation": 2,
+      "depth": 21,
+      "least_b": 1183555
+    },
+    {
+      "valuation": 3,
+      "depth": 18,
+      "least_b": 148891
+    },
+    {
+      "valuation": 4,
+      "depth": 19,
+      "least_b": 311371
+    },
+    {
+      "valuation": 5,
+      "depth": 16,
+      "least_b": 52651
+    },
+    {
+      "valuation": 6,
+      "depth": 15,
+      "least_b": 18539
+    },
+    {
+      "valuation": 7,
+      "depth": 14,
+      "least_b": 15851
+    },
+    {
+      "valuation": 8,
+      "depth": 14,
+      "least_b": 10475
+    },
+    {
+      "valuation": 9,
+      "depth": 12,
+      "least_b": 3819
+    },
+    {
+      "valuation": 10,
+      "depth": 12,
+      "least_b": 2795
+    },
+    {
+      "valuation": 11,
+      "depth": 10,
+      "least_b": 747
+    },
+    {
+      "valuation": 12,
+      "depth": 10,
+      "least_b": 747
+    },
+    {
+      "valuation": 13,
+      "depth": 8,
+      "least_b": 235
+    },
+    {
+      "valuation": 14,
+      "depth": 7,
+      "least_b": 107
+    },
+    {
+      "valuation": 15,
+      "depth": 6,
+      "least_b": 43
+    },
+    {
+      "valuation": 16,
+      "depth": 6,
+      "least_b": 43
+    },
+    {
+      "valuation": 17,
+      "depth": 4,
+      "least_b": 11
+    },
+    {
+      "valuation": 18,
+      "depth": 4,
+      "least_b": 11
+    },
+    {
+      "valuation": 19,
+      "depth": 2,
+      "least_b": 3
+    }
+  ],
+  "verified_no_immediate_recharge": true
+}
