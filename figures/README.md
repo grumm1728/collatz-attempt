@@ -1,9 +1,10 @@
 # Comparing the multipliers
 
-Rebuild all six image files and the exact atlas data from the repository root with Python 3.13 and Matplotlib 3.10.8. Set up the plotting dependency with `python -m pip install matplotlib==3.10.8`. The arithmetic scripts run independently of Matplotlib.
+Rebuild all four figures in PNG and SVG and the exact atlas data from the repository root with Python 3.13 and Matplotlib 3.10.8. Set up the plotting dependency with `python -m pip install matplotlib==3.10.8`. The arithmetic scripts run independently of Matplotlib.
 
 ```powershell
 python escape.py
+python continuation.py
 python figures.py
 ```
 
@@ -26,3 +27,9 @@ The horizontal coordinate is the odd seed. Each color encodes the number of time
 ![Three trajectories during their first 128 shortcut steps after the forced climb](after-the-climb.png)
 
 Here `u=1`, `j=8`, and each construction forces 256 consecutive odd shortcut steps. The horizontal origin is the resulting **even endpoint**. A vertical change of +1 means doubling, and −1 means halving. The panel shows the next 128 shortcut steps. The legend gives the later terminal event using total shortcut steps since the seed. Round-two numerical controls start at the first **odd** endpoint after the intervening halvings, a different alignment recorded in the data. Each curve follows one integer. [Scalable figure](after-the-climb.svg) · [Orbit data](../results/escape.json)
+
+## Where the long climbs end
+
+![Full trajectories for the three previously capped starts](completed-paths.png)
+
+The top panel follows the three starts `u·2^4096−1` through arrival at 1, sampling every 128 shortcut steps and at recorded landmarks. The bottom panel compares the values of the first two trajectories at equal shortcut times. Their first shared shortcut state at step 6,705 was checked by exact integer equality. [Scalable figure](completed-paths.svg) · [Continuation and step counts](../research/continuation.md)

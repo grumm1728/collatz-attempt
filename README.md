@@ -2,7 +2,9 @@
 
 We seek a positive integer whose standard Collatz trajectory avoids 1 forever, or a proof that such an integer exists. An explicit positive cycle excluding 1 has a finite certificate. An escape proof could instead give an increasing, unbounded sequence of checkpoints along one fixed orbit.
 
-The first pilot eliminated a bounded family of compressed cycle recipes. Of 18 structured escape candidates at multiplier 3, 15 reached 1 and all 18 fell below their own starting values. The note records the remaining question and commands for reproducing both rounds. [Read the sprint findings](research/pilot.md) · [Explore the three figures](figures/README.md)
+All 18 structured escape candidates from the pilot now have verified paths to 1. A follow-up argument rules out an immediately equal or longer second climb for every Mersenne seed `2^m−1` with `m≥2`. Varying the odd cofactor produces explicit seeds with any prescribed first climb length and arbitrarily long second climbs. [Recharge proof and construction](research/recharge.md) · [Completed trajectories](research/continuation.md) · [Figure collection](figures/README.md)
+
+The first pilot also eliminated a bounded family of compressed cycle recipes. Its original report preserves the initial stopping rules and findings. [First sprint](research/pilot.md)
 
 ## Running the research code
 

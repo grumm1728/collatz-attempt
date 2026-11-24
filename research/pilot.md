@@ -1,5 +1,7 @@
 # First counterexample pilot
 
+**Follow-up.** The three starts censored by this pilot have since reached 1. The immediate-recharge question posed below has also been resolved for every exponent. This note preserves what was known at the original cutoff. [Completed paths](continuation.md) · [Recharge proof](recharge.md)
+
 The two rounds found no positive Collatz counterexample. The strongest result rules out a whole family of cycle recipes in the pilot's length range. The simplest unfinished trajectory is `2^4096−1`. It fell from a 4,096-bit seed to a 3,089-bit integer by the step limit, so it cannot be the *least* counterexample. Its eventual destination was unresolved within the pilot.
 
 ## Which cycles can we rule out?

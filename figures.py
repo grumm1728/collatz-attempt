@@ -1,4 +1,4 @@
-"""Generate the three pilot figures and their exact cycle-atlas inputs."""
+"""Generate the pilot and continuation figures and the exact cycle-atlas inputs."""
 
 import json
 from fractions import Fraction
@@ -156,6 +156,44 @@ def after_climb():
     save(fig, "after-the-climb")
 
 
+def completed_paths():
+    data = json.loads((ROOT / "results" / "continuation.json").read_text(encoding="utf-8"))
+    paths = {r["u"]: dict(r["points"]) for r in data["figures"]}
+    shared = next(m for m in data["merges"] if (m["left_u"], m["right_u"]) == (1, 3))
+    merge_step = shared["left_shortcut_steps"]
+    assert merge_step == shared["right_shortcut_steps"]
+
+    fig, (top, detail) = plt.subplots(2, 1, figsize=(10, 6.6), height_ratios=[2.1, 1])
+    fig.subplots_adjust(left=0.13, right=0.96, top=0.82, bottom=0.12, hspace=0.53)
+    fig.text(0.05, 0.93, "Where the long climbs end", fontsize=22, weight="bold")
+    fig.text(0.05, 0.87, "All three seeds  u · 2⁴⁰⁹⁶ − 1  reach 1. Two join before the original stopping point.")
+    for u, color in [(5, ORANGE), (3, "#73589c"), (1, TEAL)]:
+        steps, values = zip(*paths[u].items())
+        top.plot(steps, values, color=color, lw=1.5, label=f"u = {u}")
+        top.scatter(steps[-1], values[-1], s=16, color=color)
+    top.axvline(20_000, ls=":", color=INK, lw=1)
+    top.annotate("Pilot cutoff", (20_000, 5050), xytext=(5, 0),
+                 textcoords="offset points", fontsize=9)
+    top.set(xlabel="Shortcut steps since seed", ylabel="log₂(value)", xlim=(-300, 37_000))
+    top.grid(axis="y", alpha=0.18)
+    top.legend(loc="upper right", ncol=3, frameon=False)
+
+    # Only compare values observed at the same step. Include the exact merge event.
+    times = sorted(t for t in paths[1].keys() & paths[3].keys() if t <= 9000)
+    diff = {t: paths[3][t] - paths[1][t] for t in times}
+    diff[merge_step] = 0
+    times = sorted(diff)
+    detail.axhline(0, color=INK, lw=0.7)
+    detail.plot(times, [diff[t] for t in times], color="#73589c", lw=1.5)
+    detail.scatter(merge_step, 0, color=TEAL, zorder=3)
+    detail.annotate(f"Same integer at step {merge_step:,}", (merge_step, 0),
+                    xytext=(0.77, 0.66), textcoords="axes fraction", fontsize=9,
+                    arrowprops={"arrowstyle": "->", "color": INK, "lw": 0.9})
+    detail.set(xlabel="First 9,000 shortcut steps", ylabel="log₂(value for u = 3)\n− log₂(value for u = 1)",
+               xlim=(0, 9000))
+    save(fig, "completed-paths")
+
+
 def main():
     plt.rcParams.update({"font.family": "DejaVu Sans", "text.color": INK,
                          "axes.labelcolor": INK, "axes.facecolor": PAPER,
@@ -168,6 +206,7 @@ def main():
     cycle_atlas()
     tapestry()
     after_climb()
+    completed_paths()
 
 
 if __name__ == "__main__":
